@@ -1,5 +1,6 @@
 # Android-Start-frame
 Android-Start-frame (start page, boot page, auto update)
+
 1.添加jar到lib
 
 2.往自己项目的layout里放guide.xml这个文件
