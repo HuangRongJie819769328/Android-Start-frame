@@ -10,6 +10,7 @@ Android-Start-frame (start page, boot page, auto update)
 4.复制包com.hrj.kuangjia.qidong.view到自己的项目，将R错误修改
 
 5.manifest里面需要声明，你用了启动页声明SplashActivity，并且作为主入口！用了引导页声明GuideActivity
+
           <activity
             android:name="com.hrj.kuangjia.qidong.view.SplashActivity"
             android:launchMode="singleTop"
@@ -25,11 +26,13 @@ Android-Start-frame (start page, boot page, auto update)
         </activity>
         
 6.当你使用了自动更新时添加权限
+
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
     <uses-permission android:name="android.permission.INTERNET" />
     
 7.这是自动更新的version.xml文件格式，请勿修改,放到自己服务器
+
 <update>
 	<version>2</version>
 	<name>baidu_xinwen_1.1.0</name>
@@ -154,6 +157,7 @@ Android-Start-frame (start page, boot page, auto update)
 		});
 		
 9.manifest里面需要声明自己自定义的application name，最终预览应该如下
+
     <application
         android:name="com.hrj.text.qidongkuangjia.MyApplication"
         android:allowBackup="true"
