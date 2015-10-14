@@ -1,9 +1,13 @@
 # Android-Start-frame
 Android-Start-frame (start page, boot page, auto update)
 1.添加jar到lib
+
 2.往自己项目的layout里放guide.xml这个文件
+
 3.往自己项目的drawable里放btn_guide_go.xml这文件，如果没有drawable，可以自己建立一个
+
 4.复制包com.hrj.kuangjia.qidong.view到自己的项目，将R错误修改
+
 5.manifest里面需要声明，你用了启动页声明SplashActivity，并且作为主入口！用了引导页声明GuideActivity
           <activity
             android:name="com.hrj.kuangjia.qidong.view.SplashActivity"
@@ -19,10 +23,12 @@ Android-Start-frame (start page, boot page, auto update)
             android:name="com.hrj.kuangjia.qidong.view.GuideActivity"
             android:launchMode="singleTop" >
         </activity>
+        
 6.当你使用了自动更新时添加权限
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
     <uses-permission android:name="android.permission.INTERNET" />
+    
 7.这是自动更新的version.xml文件格式，请勿修改,放到自己服务器
 <update>
 	<version>2</version>
@@ -30,6 +36,7 @@ Android-Start-frame (start page, boot page, auto update)
 	<description>动态改变更新提示：软件内容</description>
 	<url>http://gdown.baidu.com/data/wisegame/f98d235e39e29031/baiduxinwen.apk</url>
 </update>
+
 8.详细介绍
 		请在自己的application的onCreate里调用
 		// 初始化启动框架
@@ -145,6 +152,7 @@ Android-Start-frame (start page, boot page, auto update)
 				startActivity(intent);
 			}
 		});
+		
 9.manifest里面需要声明自己自定义的application name，最终预览应该如下
     <application
         android:name="com.hrj.text.qidongkuangjia.MyApplication"
