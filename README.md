@@ -41,24 +41,43 @@ Android-Start-frame (start page, boot page, auto update)
 	</update>
 
 8.详细介绍
+
 		请在自己的application的onCreate里调用
+		
 		// 初始化启动框架
+		
 		Qidong_Util.init(this);
+		
 		// 设置启动页可以用
+		
 		Qidong_Util.setSplashEnabled(true);
+		
 		// 设置自己的启动页布局
+		
 		Qidong_Util.setSplashLayout(R.layout.splash);
+		
 		// 设置引导页可以用
+		
 		Qidong_Util.setGuideEnabled(true);
+		
 		// 设置自己的引导页布局
+		
 		ArrayList<Integer> map_r_layout = new ArrayList<Integer>();
+		
 		map_r_layout.add(R.layout.what_new_one);
+		
 		map_r_layout.add(R.layout.what_new_two);
+		
 		map_r_layout.add(R.layout.what_new_three);
+		
 		Qidong_Util.setGuideLayout(map_r_layout);
+		
 		// 设置自动更新可以用
+		
 		Qidong_Util.setUpdateEnabled(true);
+		
 		// httppath 更新网址updateShowBack 是否更新的回调事件updateDownloadBack 下载回调事件
+		
 		Qidong_Util.setUpdateUrl(
 				"http://tashan.wicp.net/gaoxiaobang/version.xml",
 				new UpdateShowBack() {
@@ -127,6 +146,7 @@ Android-Start-frame (start page, boot page, auto update)
 					}
 
 				});
+				
 		// 如果有数据需要加载的，放在这里加载，一直到加载完成才会跳过页面
 		Qidong_Util.setWaitingloadDate(new WaitingloadDate() {
 			public void onLoadDate(Context context,
