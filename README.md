@@ -33,12 +33,12 @@ Android-Start-frame (start page, boot page, auto update)
     
 7.这是自动更新的version.xml文件格式，请勿修改,放到自己服务器
 
-<update>
-	<version>2</version>
-	<name>baidu_xinwen_1.1.0</name>
-	<description>动态改变更新提示：软件内容</description>
-	<url>http://gdown.baidu.com/data/wisegame/f98d235e39e29031/baiduxinwen.apk</url>
-</update>
+	<update>
+		<version>2</version>
+		<name>baidu_xinwen_1.1.0</name>
+		<description>动态改变更新提示：软件内容</description>
+		<url>http://gdown.baidu.com/data/wisegame/f98d235e39e29031/baiduxinwen.apk</url>
+	</update>
 
 8.详细介绍
 		请在自己的application的onCreate里调用
